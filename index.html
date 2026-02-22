@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="tr"> 
+<link rel="stylesheet" href="style.css">
+
+<head>
+<meta charset="UTF-8">
+<title>Pastane Site</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm">
+  <div class="container-fluid">
+
+    <a class="navbar-brand fw-bold">Nisa'nın Pastanesi</a>
+
+    <button class="navbar-toggler"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+
+      <ul class="navbar-nav me-3">
+        <li class="nav-item">
+          <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#menuModal">
+            Menü
+          </button>
+          </button>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav mx-auto gap-3">
+        <li class="nav-item">
+          <a class="nav-link nav-ozel">Pastalar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-ozel">Kurabiyeler</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-ozel">İçecekler</a>
+        </li>
+      </ul>
+
+      <button class="btn btn-dark px-4 rounded-pill">
+        🛒 Sepetim
+      </button>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="container mt-5">
+  <div class="row">
+
+    <div class="col-md-4 mb-4">
+      <div class="card pastane-kart">
+        <img src="https://static.ticimax.cloud/cdn-cgi/image/width=0,quality=0/9247/uploads/urunresimleri/buyuk/cilek-ruyasi-adet-pasta-087-4b.jpg" class="card-img-top" alt="urun">
+
+        <div class="card-body text-center">
+          <h5 class="card-title">Çilekli Pasta</h5>
+          <p class="card-text text-muted">
+            Taze çilek ve özel krema ile hazırlanmıştır.
+          </p>
+          <button class="btn btn-pastane"
+            data-bs-toggle="modal"
+            data-bs-target="#urunModal"
+            onclick="urunGoster()">
+            Tarif
+          </button>   
+
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <span class="fw-bold fs-5">₺300</span>
+            <button class="btn btn-pastane">
+              Sepete Ekle
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card pastane-kart">
+        <img src="https://www.cakeplanet.com.tr/images/product/devils-cake_BOIx.jpg" class="card-img-top" alt="Çikolatalı Pasta">
+
+        <div class="card-body text-center">
+          <h5 class="card-title">Çikolatalı Pasta</h5>
+          <p class="card-text">Yoğun kakao aromalı.</p>  
+
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <span class="fw-bold">₺300</span>
+            <button class="btn btn-pastane">
+              Sepete Ekle
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card pastane-kart">
+        <img src="https://www.cakeplanet.com.tr/images/product/mini_ORMAN%20MEYVEL%C4%B0%20REDVELVET%20PASTA%20D%C4%B0L%C4%B0M2_b4Y8.jpg" class="card-img-top" alt="Meyveli Pasta">
+
+        <div class="card-body text-center">
+          <h5 class="card-title">Meyveli Pasta</h5>
+          <p class="card-text">Böğürtlen, yaban mersini ve çilek.</p>
+
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <span class="fw-bold">₺300</span>
+            <button class="btn btn-pastane">
+              Sepete Ekle
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+
+    <div class="col-md-4 mb-4">
+      <div class="card pastane-kart">
+        <img src="https://i.pinimg.com/736x/3f/25/6c/3f256c75a240ddf86e77e09b57c6c2d0.jpg" class="card-img-top" alt="Cheesecake">
+
+        <div class="card-body text-center">
+          <h5 class="card-title">Cheesecake</h5>
+          <p class="card-text text-muted">
+            Limonlu hazırlanmış özel krema.
+          </p>
+
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <span class="fw-bold fs-5">₺310</span>
+            <button class="btn btn-pastane">
+              Sepete Ekle
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card pastane-kart">
+        <img src="https://menu.myqrcodemenu.com/files/products/27b77ed5-82fb-41dc-b44d-be743626928a0c7c27ed-4cdd-4703-a973-b8d42b7d9fcb.jpg" class="card-img-top" alt="Sweet Croissants">
+
+        <div class="card-body text-center">
+          <h5 class="card-title">Sweet Croissants</h5>
+          <p class="card-text">Meyve ve çikolata.</p>
+
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <span class="fw-bold">₺340</span>
+            <button class="btn btn-pastane">
+              Sepete Ekle
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card pastane-kart">
+        <img src="https://biqmenu.com/limoncafe/assets/uploads/urunler/d48fa-lotus-magnolya.jpg" class="card-img-top" alt="Magnolia">
+
+        <div class="card-body text-center">
+          <h5 class="card-title">Magnolia</h5>
+          <p class="card-text">Lotus özel krema.</p>
+
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <span class="fw-bold">₺280</span>
+            <button class="btn btn-pastane">
+              Sepete Ekle
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+
+    <div class="col-md-4 mb-4">
+      <div class="card pastane-kart">
+        <img src="https://cemilhoca.com.tr/qr/wp-content/uploads/2024/11/sufle.webp" class="card-img-top" alt="Sufle">
+
+        <div class="card-body text-center">
+          <h5 class="card-title">Sufle</h5>
+          <p class="card-text text-muted">
+            Bitter çikolata.
+          </p>
+
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <span class="fw-bold fs-5">₺290</span>
+            <button class="btn btn-pastane">
+              Sepete Ekle
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card pastane-kart">
+        <img src="https://dokuzuncubulut.com/images/stories/meyvelitatli/pannacota.jpg" class="card-img-top" alt="Panna Cotta">
+        <div class="card-body text-center">
+          <h5 class="card-title">Panna Cotta</h5>
+          <p class="card-text">Portakal peltesi sosu.</p>
+
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <span class="fw-bold">₺270</span>
+            <button class="btn btn-pastane">
+              Sepete Ekle
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card pastane-kart">
+        <img src="https://images.ctfassets.net/v601h1fyjgba/zfwTBquwJXUs2JZjZI8v4/82fc88f9d99ce3e8e9fe655ae87cfc12/Affogato.jpg" class="card-img-top" alt="Affogato">
+
+        <div class="card-body text-center">
+          <h5 class="card-title">Affogato</h5>
+          <p class="card-text">Espresso Shot.</p>
+
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <span class="fw-bold">₺250</span>
+            <button class="btn btn-pastane">
+              Sepete Ekle
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="container mt-5">
+  <div class="row">
+
+    <div class="col-md-4 mb-4">
+      <div class="card pastane-kart">
+        <img src="https://dinnerthendessert.com/wp-content/uploads/2023/10/Caramel-Macchiato-10.jpg" class="card-img-top" alt="Macchiato">
+
+        <div class="card-body text-center">
+          <h5 class="card-title">Caramel Macchiato</h5>
+
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <span class="fw-bold fs-5">₺270</span>
+            <button class="btn btn-pastane">
+              Sepete Ekle
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card pastane-kart">
+        <img src="https://i.lezzet.com.tr/images-xxlarge-recipe/cold-brew-b36cb511-a591-4cfe-af1e-4e661db9ffd4.jpg" class="card-img-top" alt="Cold Brew">
+
+        <div class="card-body text-center">
+          <h5 class="card-title">Cold Brew</h5>
+
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <span class="fw-bold">₺250</span>
+            <button class="btn btn-pastane">
+              Sepete Ekle
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card pastane-kart">
+        <img src="https://images.immediate.co.uk/production/volatile/sites/2/2021/11/Mocha-1fc71f7.png?quality=90&resize=708,643" class="card-img-top" alt="Mocha">
+
+        <div class="card-body text-center">
+          <h5 class="card-title">Mocha</h5>
+
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <span class="fw-bold">₺230</span>
+            <button class="btn btn-pastane">
+              Sepete Ekle
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="cizgi-alani">
+
+  <div class="cizgi"></div>
+
+  <div class="cizgi-icerik text-center">
+    <h5>İletişim</h5>
+    <p>📍 Kızılay No:25 Ankara</p>
+    <p>📞 0534 034 53 85</p>
+    <p> ✉ info@pastanem.com</p>
+  </div>
+
+  <div class="cizgi"></div>
+
+</div>
+
+
+<div class="modal fade" id="menuModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content ozel-modal">
+
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-bold">MENÜ</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body text-center">
+       <img src="c:\Users\aysen\Downloads\menüü.png" class="img-fluid rounded">
+        </div>
+
+      </div>
+
+    </div>
+  </div> 
+</div> 
+
+<div class="modal fade" id="urunModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="urunBaslik">Ürün</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+    <div class="modal-body">
+
+  <div class="tarif-kutu">
+
+    <h4 class="mb-3">Tarif</h4>
+
+    <ol class="tarif-liste">
+      <li>Keki hazırla (pandispanya pişir ve soğut).</li>
+      <li>Kremayı çırp (süt + krem şanti).</li>
+      <li>Keki 2-3 kata ayır.</li>
+      <li>Katları süt ile ıslat.</li>
+      <li>Arasına krema ve çilek ekle.</li>
+      <li>Katları kapat.</li>
+      <li>Dışını kremayla kapla.</li>
+      <li>Üstünü çilekle süsle.</li>
+      <li>2-3 saat dinlendir.</li>
+    </ol>
+
+  </div>
+
+</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+function urunGoster(ad, aciklama, fiyat) {
+  document.getElementById("urunBaslik").innerText = ad;
+  document.getElementById("urunAciklama").innerText = aciklama;
+  document.getElementById("urunFiyat").innerText = fiyat;
+}
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
